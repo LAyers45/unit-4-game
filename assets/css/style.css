@@ -1,0 +1,16 @@
+.jumbotron{
+    width: 450px;
+    height: 150px;
+    background-color: orange;
+}
+.card{
+    width: 550px;
+}
+.display-4{
+    font-size: 45px;
+    color:white;
+}
+body{
+    background-image: url(".../assets/images/crystal-background.jpg");
+    width:100%;
+}
