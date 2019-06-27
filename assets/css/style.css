@@ -17,7 +17,19 @@ body{
     background: black;
     width:100%;
 }
-.crystal{
+.diamond{
+    width: 100px;
+    height: 100px;
+}
+.emerald{
+    width: 100px;
+    height: 100px;
+}
+.ruby{
+    width: 100px;
+    height: 100px;
+}
+.sapphire{
     width: 100px;
     height: 100px;
 }
