@@ -1,6 +1,6 @@
 .jumbotron{
     width: 450px;
-    height: 100px;
+    height: 90px;
     background-color: orange;
     text-align:center;
     font-weight: bold;
@@ -14,7 +14,7 @@
     color:white;
 }
 body{
-    background: black;
+    background: url("../images/crystal-background.jpg");
     width:100%;
 }
 .diamond{
