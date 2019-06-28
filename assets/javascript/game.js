@@ -13,6 +13,7 @@ $(document).ready(function () {
     $(".totalNumber").html(totalNumber);
     $(".winNumber").html("Wins: " + winNumber);
     $(".loseNumber").html("Losses: " + loseNumber);
+
     function initializeGame() {
         totalNumber = Math.floor(Math.random() * 120) + 19;
         //console.log(totalNumber);
@@ -21,24 +22,37 @@ $(document).ready(function () {
         emerald = Math.floor(Math.random() * 12) + 1;
         ruby = Math.floor(Math.random() * 12) + 1;
         sapphire = Math.floor(Math.random() * 12) + 1;
+        $(".totalNumber").html(totalNumber);
+        $(".userNumber").html(userNumber);
+    }
+
+    $(".diamond").on("click", function () {
+        userNumber = userNumber + diamond;
+        $(".userNumber").html(userNumber);
+        winLose();
+        //console.log(diamond);
+        //console.log(emerald);
+        //console.log(ruby);
+        //console.log(sapphire);
+    });
+    $(".emerald").on("click", function () {
+        userNumber = userNumber + emerald;
+        $(".userNumber").html(userNumber);
+        winLose();
+    });
+    $(".ruby").on("click", function () {
+        userNumber = userNumber + ruby;
+        $(".userNumber").html(userNumber);
+        winLose();
+    });
+    $(".sapphire").on("click", function () {
+        userNumber = userNumber + sapphire;
+        $(".userNumber").html(userNumber);
+        winLose();
+    });
 
 
-        $(".diamond").on("click", function () {
-            userNumber = userNumber + diamond;
-            $(".userNumber").html(userNumber);
-        });
-        $(".emerald").on("click", function () {
-            userNumber = userNumber + emerald;
-            $(".userNumber").html(userNumber);
-        });
-        $(".ruby").on("click", function () {
-            userNumber = userNumber + ruby;
-            $(".userNumber").html(userNumber);
-        });
-        $(".sapphire").on("click", function () {
-            userNumber = userNumber + sapphire;
-            $(".userNumber").html(userNumber);
-        });
+    function winLose() {
         if (userNumber === totalNumber) {
             winNumber++;
             $(".winNumber").html("Wins: " + winNumber);
@@ -51,5 +65,6 @@ $(document).ready(function () {
             initializeGame();
         }
     }
+
     initializeGame();
 });
